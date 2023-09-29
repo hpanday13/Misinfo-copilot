@@ -21,7 +21,7 @@ def display_images(filtered_df, offset, length):
 def main():
     # Sub-Title: What and how
     st.subheader("What and how")
-    
+    st.write("Venture into the thematic intricacies of misinformation with our categorized area charts. Trace political, religious, and health-related themes and their nuanced sub-categories like political entities, religious affiliations, and Covid-19 related misinformation. Further delve into specifics with hyperlinked articles, enabling an informed understanding of the underlying facts.")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
@@ -112,6 +112,6 @@ def main():
      st.write("", "", "")  # Empty space for alignment
      if st.button("Next", key="next_button"):
         st.session_state['current_image_index'] = min(len(filtered_df) - 1, start_idx + 6)
-    st.write ("Our classifiers are still a work in progress and there might have a few cases of miscategorised factchecks.")
+    st.write ("Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.")
 if __name__ == '__main__':
     main()
