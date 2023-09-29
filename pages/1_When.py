@@ -20,7 +20,7 @@ def display_images(filtered_df, offset, length):
 def main():
     # Sub-Title: When
     st.subheader("When")
-    
+    st.write("Explore the temporal spread of misinformation through our interactive bar chart detailing fake news events. Curate the headlines and paragraphs from reliable fact-checking sources, and view the visuals. Navigate through time, selecting dates of interest, to reveal how the misinformation landscape has evolved.")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
