@@ -99,7 +99,7 @@ def main():
     
     if 'chatbot' in st.session_state:
         if st.button("Help me with your wisdom"):
-            st.write("This process could take some time. Please wait. The text wwill appear when the ruuninng animation on the top right stops.")
+            st.write("This process could take some time. Please wait. The text will appear when the ruuninng animation on the top right stops.")
             response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
             st.subheader("What they say:")
             st.write(response['text'])
