@@ -21,7 +21,7 @@ def display_images(filtered_df, offset, length):
 def main():
     # Sub-Title: Where
     st.subheader("What and how")
-    
+    st.write("Uncover the geographical hotspots of misinformation with our intuitive map, indicating areas based on the frequency of related fake news. Complement this with a glance at the platforms and their mentions around misinformation. Navigate the charts, choose dates, and use the selection tools to obtain hyperlinked fact-checking articles related to your theme of interest.")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
@@ -135,7 +135,7 @@ def main():
      st.write("", "", "")  # Empty space for alignment
      if st.button("Next", key="next_button"):
         st.session_state['current_image_index'] = min(len(filtered_df) - 1, start_idx + 6)
-    st.write ("Our classifiers are still a work in progress and there might have a few cases of miscategorised factchecks.")
+    st.write ("Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.")
 
 if __name__ == '__main__':
     main()
