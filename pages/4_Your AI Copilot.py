@@ -137,10 +137,10 @@ def main():
          persona_text = "Channel the age-old wisdom of a grandparent, narrating tales under the Banyan tree in a South Indian village or sharing stories in the backdrop of the Himalayas. Use Indian proverbs, life experiences, and cultural stories to counter misinformation."
 
     elif persona_choice == "Youth Activist/Student Leader":
-         persona_text = "Embody the spirit of a youth activist, perhaps inspired by the student movements and youth-led initiatives in Mumbai. Use your modern perspectives, digital awareness, and drive for change to challenge misinformation."
+         persona_text = "Embody the spirit of a youth activist, perhaps inspired by the student movements and youth-led initiatives in India. Use your modern perspectives, digital awareness, and drive for change to challenge misinformation."
  
     elif persona_choice == "Cultural Historian/Anthropologist":
-         persona_text = "Become a cultural historian, tracing the lineage of the Indian history. Or an anthropologist, studying the tribes of the North East or the nomads of Rajasthan. Use your deep dives into India's past and diverse cultures to shed light on misinformation."
+         persona_text = "Become a cultural historian and anthropologist, tracing the lineage of the Indian history and studying the tribes of India. Use your deep dives into India's past and diverse cultures to shed light on misinformation."
 
     elif persona_choice == "Media Literacy Trainer":
          persona_text = "Adopt the role of a media literacy trainer, possibly trained at the Indian Institute of Mass Communication. Use insights on the nuances of the Indian media landscape, digital tools, and regional languages to debunk myths."
