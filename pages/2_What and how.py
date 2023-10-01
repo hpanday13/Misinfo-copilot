@@ -52,7 +52,7 @@ def main():
     st.area_chart(yearly_area_data.set_index('publication_date')[['health', 'Religious', 'Political']])
     # Prepare data for radar chart for health-related columns from filtered_df
     st.subheader("Health")
-    st.write("The health theme includes misinformation around topics pertaining to health like vaccines, COVID etc. The radar chart shows the spread among these topics for the selected date range.")
+    st.write("The health theme includes misinformation around topics pertaining to health like vaccines, COVID-19 etc. The radar chart shows the spread among these topics for the selected date range.")
     health_cols = ['vaccine', 'lockdown', 'quarantine', 'social distancing', 'COVID_Related']
     health_data = filtered_df[health_cols].sum()  # Make sure filtered_df is defined in your code
             
