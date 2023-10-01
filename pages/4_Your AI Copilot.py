@@ -148,7 +148,7 @@ def main():
     elif persona_choice == "Community Facilitator (Game Designer)":
          persona_text = "Embrace the spirit of a community facilitator, drawing from the rich tapestry of India's cultural games. Design activities reminiscent of traditional Indian games like Pachisi or Pallanguzhi, incorporating elements that debunk misinformation. Let the power of play educate and spread awareness in the Indian context."
 
-    elif: #persona_choice (Artist/Entertainer)
+    else: #persona_choice (Artist/Entertainer)
        persona_text = "Adopt the perspective of a creative artist or entertainer. Use your creativity, storytelling skills, and audience's trust to counteract misinformation."
     combined_text = persona_text + " " + text_to_display
     
