@@ -11,6 +11,7 @@ with col[1]:
 
 st.subheader("    Your AI and Data Co-pilot against Misinformation")
 st.write("Fighting Misinformation doesn't have to be this hard :disappointed:") 
+st.markdown(":orange[Please visit this app from a system's browser for best user experience.]")
 
 st.markdown(":rainbow[Hey You!]")
 st.write("[Brandolini's law](https://www.nature.com/articles/540171a)"" alternatively known as the Bullshit Asymmetry Principle says that:")
