@@ -97,8 +97,8 @@ def main():
                         color_discrete_sequence=["fuchsia"], size_max=15, zoom=3)
     fig.update_layout(mapbox_style="open-street-map", height=600)
     st.plotly_chart(fig)
-    st.subheader("Platfroms")
-    st.write("The bar chart shows the platforms mentioned in the fact-checked misinformation. the length of the bar chart if a sum of mentions for the selected date range.")
+    st.subheader("Platforms")
+    st.write("The bar chart shows the platforms mentioned in the fact-checked misinformation. The length of the bar chart is a sum of mentions for the selected date range.")
     social_media_cols = ['facebook', 'twitter', 'instagram', 'whatsapp', 'linkedin', 'snapchat', 'youtube', 'tiktok', 'pinterest']
     social_media_counts = filtered_df[social_media_cols].sum()
     # Assuming social_media_counts is a pandas Series
