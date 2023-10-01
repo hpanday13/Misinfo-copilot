@@ -22,6 +22,7 @@ def main():
     # Sub-Title: What and how
     st.subheader("What and how")
     st.write("Venture into the thematic intricacies of misinformation with our categorized area charts. Trace political, religious, and health-related themes and their nuanced sub-categories like political entities, religious affiliations, and Covid-19 related misinformation. Further delve into specifics with hyperlinked articles, enabling an informed understanding of the underlying facts.")
+    st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
@@ -51,6 +52,7 @@ def main():
     st.area_chart(yearly_area_data.set_index('publication_date')[['health', 'Religious', 'Political']])
     # Prepare data for radar chart for health-related columns from filtered_df
     st.subheader("Health")
+    st.write("The health theme includes misinformation around topics pertaining to health like vaccines, COVID etc. The radar chart shows the spread among these topics for the selected date range.")
     health_cols = ['vaccine', 'lockdown', 'quarantine', 'social distancing', 'COVID_Related']
     health_data = filtered_df[health_cols].sum()  # Make sure filtered_df is defined in your code
             
@@ -78,6 +80,7 @@ def main():
     st.plotly_chart(fig)
     
     st.subheader("Religion")
+    st.write("The religion theme includes misinformation around religious entities. The radar chart shows the spread among different religious identifiers for the selected date range.")
     religion_cols = ['hindu', 'muslim', 'islam', 'christian', 'sikh', 'jain', 'buddhist', 'temple', 'mosque', 'church']
     religion_data = filtered_df[religion_cols].sum()
     labels = religion_data.index
@@ -87,6 +90,7 @@ def main():
     fig_religion.update_layout(polar=dict(radialaxis=dict(visible=True)), showlegend=False)
     st.plotly_chart(fig_religion)
     st.subheader("Political")
+    st.write("The political theme includes misinformation involving political entities. The trendline shows a cumulative trend for the selected date range.")
     politics_trend = filtered_df.resample('M', on='publication_date').sum()['Political']  # Summing the mentions of politics per month
     fig = px.line(politics_trend, x=politics_trend.index, y='Political', title='Monthly Mentions of Political entities')
     st.plotly_chart(fig)
@@ -112,6 +116,6 @@ def main():
      st.write("", "", "")  # Empty space for alignment
      if st.button("Next", key="next_button"):
         st.session_state['current_image_index'] = min(len(filtered_df) - 1, start_idx + 6)
-    st.write ("Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.")
+    st.markdown(":orange[Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.]")
 if __name__ == '__main__':
     main()
