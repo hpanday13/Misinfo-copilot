@@ -1,6 +1,12 @@
 import streamlit as st
-import streamlit as st
 
+
+st.set_page_config(
+    page_title="Dignity at Scale",
+    page_icon="🕊️",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 col = st.columns((1,1,1))
 with col[1]:
