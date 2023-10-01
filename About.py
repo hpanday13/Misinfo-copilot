@@ -20,7 +20,7 @@ with col[1]:
  st.write("'The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it.'")
 st.write("You, my young friend, might have felt it upon seeing misinformation everywhere: in family WhatsApp groups, Instagram, news, and even gaming forums. Many times, you have stood up to fight for the truth and educate others through the ways that they trust. But it's so tiring, and coffee goes only so far.")
 st.subheader("Don't you worry!")
-st.write("After thousands of lines of code, many sleepless nights, and hundreds of cups of masala tea later, Dignity at Scale is here to assist you. It serves as your personal AI and Data Co-pilot, helping you navigate the vast sea of misinformation, focusing on what's most important and where, and delving deep into the tactics used in trending misinformation in your own community and on the platforms you cherish. It empowers you to harness the wisdom of our AI personas to craft effective debunking and counter-speech campaigns. Whether you're an NGO combating misinformation or a youth influencer, Dignity at Scale ensures your voyage against falsehoods is as thrilling as it is impactful. ")
+st.write("After thousands of lines of code, many sleepless nights, and hundreds of cups of masala tea later, Dignity at Scale is here to assist you. It serves as your personal AI and Data Co-pilot, helping you navigate the vast sea of misinformation, focusing on what's most important and where, and delving deep into the tactics used in trending misinformation in your own community and on the platforms you cherish. It empowers you to harness the wisdom of our 20 AI personas to craft effective debunking and counter-speech campaigns. Whether you're an NGO combating misinformation or a youth influencer, Dignity at Scale ensures your voyage against falsehoods is as thrilling as it is impactful. ")
 
 st.write(" Leveraging cutting-edge digital anthropological techniques and sophisticated data science methodologies, we aim to empower young influencers and NGOs with a dynamic and comprehensive view of the fake news ecosystem. Dive into curated dashboards that visualize temporal trends, thematic content, geographical locations, and their spread across platforms. Further, our unique AI co-pilot stands by to assist you in debunking and understanding misinformation. Get started and embark on this journey of truth.")
 
@@ -31,7 +31,7 @@ st.write("Understand the thematic intricacies of misinformation, focusing on pol
 st.markdown(":blue[Where Dashboard]")
 st.write("Locate the geographical epicenters of misinformation and familiarize yourself with how they are spread across platforms you love.")
 st.markdown(":blue[AI Co-pilot]")
-st.write("Further, our unique AI Co-pilot stands ready to assist in debunking and understanding misinformation with domain-specific wisdom. Begin your exploration, and gain a panoramic yet detailed view of the misinformation around you.")
+st.write("Further, our unique AI Co-pilot stands ready to assist in debunking and understanding misinformation with domain-specific wisdom from 20 personas. Begin your exploration, and gain a panoramic yet detailed view of the misinformation around you.")
 
 st.subheader("Limitations and Word of Caution")
 st.write("1. The public servers we use might sometimes get overwhelmed by the number of people accessing them. Please be patient.")
