@@ -16,7 +16,7 @@ st.markdown(":rainbow[Hey You!]")
 st.write("[Brandolini's law](https://www.nature.com/articles/540171a)"" alternatively known as the Bullshit Asymmetry Principle says that:")
 col = st.columns((1,3,1))
 with col[1]:
- st.write("'the amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it.'")
+ st.write("'The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it.'")
 st.write("You, my young friend, might have felt it upon seeing misinformation everywhere; in family WhatsApp groups, Instagram, news, and even gaming forums. Many times, you have stood up to fight for the truth and educate others through the ways that they trust. But it's so tiring, and coffee helps only so far.")
 st.subheader("Don't you worry!")
 st.write("After thousands of lines of code, many sleepless nights, and hundreds of cups of masala tea later, Dignity at Scale is here to assist you. It serves as your personal AI and Data Co-pilot, helping you navigate the vast sea of misinformation, focusing on what's most important and where, and delving deep into the tactics used in trending misinformation in your own locality and on the platforms you cherish. It empowers you to harness the wisdom of our AI personas to craft effective debunking and counter-speech campaigns. Whether you're an NGO combating misinformation or a youth influencer, Dignity at Scale ensures your voyage against falsehoods is as thrilling as it is impactful, turning tides in the sea of misinformation. ")
@@ -41,7 +41,7 @@ st.write("4. Our AI co-pilot is a big experiment in understanding the role large
 st.subheader("In the background")
 st.write("We have collected a corpus of a constantly updated data-lake through an IFCN member in India. Our algorithms then used cutting edge natural language processing techniques to curate and expand the dataset. Our on server algorithms allows an exploratory analysis of these datasets. In parallel, we are using capabilities of cutting edge large language models in helping build narratives against online misinformation.")
 
-st.subheader("In near furture")
+st.subheader("In near future")
 st.write("1. Expanding the data-lake to multiple IFCN members across South Asia and including 10 most spoken languages in the region.")
 st.write("2. Increase accuracy of our classifiers across languages and build a training dataset for Named Entity Recognition based on the current data-lake.")
 st.write("3. Provide functionality for thick-big data gathering and analysis around misinformation on inputs provided by youth influencers.")
