@@ -130,7 +130,7 @@ def main():
     elif persona_choice == "Media Literacy Trainer":
        persona_text = "Step into the shoes of a media literacy expert. Use your deep understanding of media biases, digital tools, and fact-checking skills to guide the young person in discerning truth from misinformation in the media landscape."
     else:  # Community Facilitator (Game Designer)
-       persona_text = "Embody the role of a community facilitator specializing in game design. Design engaging community games and activities that foster critical thinking and collaborative problem-solving to debunk misinformation. Use the power of play
+       persona_text = "Embody the role of a community facilitator specializing in game design. Design engaging community games and activities that foster critical thinking and collaborative problem-solving to debunk misinformation. Use the power of play."
     combined_text = persona_text + " " + text_to_display
     
     if 'chatbot' in st.session_state:
