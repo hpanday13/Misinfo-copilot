@@ -24,7 +24,7 @@ def display_images(filtered_df, offset, length):
     col2.image(displayed_images[1], width=300)
     col2.markdown(f"[{filtered_df['headline'].iloc[offset + 1]}]({filtered_df['Article Links'].iloc[offset + 1]})")
     
-    selected_option = st.radio("Choose a misninformation to debunk:", ['Misinformation 1', 'Misinformation 2'], key='misinfo_radio')
+    selected_option = st.radio("Choose a misinformation to debunk:", ['Misinformation 1', 'Misinformation 2'], key='misinfo_radio')
     selected_index = 0 if selected_option == 'Misinformation 1' else 1
     st.subheader("You chosen misinformation to debunk is")
     st.image(displayed_images[selected_index], width=300)
@@ -90,11 +90,11 @@ def main():
     persona_choice = st.radio("Choose a persona:", ["Religious Leader", "Doctor", "Librarian"])
 
     if persona_choice == "Religious Leader":
-       persona_text = "Take the role of a learned religious leader. You are helping a young person in fighting misinformation. Based on the misninformation text coming next, choose an appropiate religion and provide a relevant message containing religious teaching to fight the misinformation."
+       persona_text = "Take the role of a learned religious leader. You are helping a young person in fighting misinformation. Based on the misinformation text coming next, choose an appropriate religion and provide a relevant message containing religious teaching to fight the misinformation."
     elif persona_choice == "Doctor":
-       persona_text = "Take the role of a senior doctor and medical researcher. You are helping a young person in fighting misinformation. Based on the misninformation text coming next, choose an appropiate source and provide a relevant message containing citations to fight the misinformation."
+       persona_text = "Take the role of a senior doctor and medical researcher. You are helping a young person in fighting misinformation. Based on the misinformation text coming next, choose an appropriate source and provide a relevant message containing citations to fight the misinformation."
     else:  # Librarian
-       persona_text = "Take the role of a senior librarian and historian. You are helping a young person in fighting misinformation. Based on the misninformation text coming next, choose an appropiate discipline and author and provide a relevant message containing citations to fight the misinformation."
+       persona_text = "Take the role of a senior librarian and historian. You are helping a young person in fighting misinformation. Based on the misinformation text coming next, choose an appropriate discipline and author and provide a relevant message containing citations to fight the misinformation."
     combined_text = persona_text + " " + text_to_display
     
     if 'chatbot' in st.session_state:
