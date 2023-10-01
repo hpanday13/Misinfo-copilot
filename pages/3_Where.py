@@ -22,6 +22,7 @@ def main():
     # Sub-Title: Where
     st.subheader("What and how")
     st.write("Uncover the geographical hotspots of misinformation with our intuitive map, indicating areas based on the frequency of related fake news. Complement this with a glance at the platforms and their mentions around misinformation. Navigate the charts, choose dates, and use the selection tools to obtain hyperlinked fact-checking articles related to your theme of interest.")
+     st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
