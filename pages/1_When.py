@@ -21,7 +21,7 @@ def main():
     # Sub-Title: When
     st.subheader("When")
     st.write("Explore the temporal spread of misinformation through our interactive bar chart detailing fake news events. Curate the headlines and paragraphs from reliable fact-checking sources, and view the visuals. Navigate through time, selecting dates of interest, to reveal how the misinformation landscape has evolved.")
-    st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
+    st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the available data would throw an error.]")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
