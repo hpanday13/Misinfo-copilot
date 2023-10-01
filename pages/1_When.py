@@ -72,7 +72,7 @@ def main():
 
     start_data_idx = st.session_state['current_data_index']
     end_data_idx = start_data_idx + 100
-    st.markdown(":orange[The bars are colored based on whether their height is below or above 20% of the mean count of articles. Bars below 80% of the mean are blue(Just a Whiff of Gossip), bars above 120% of the mean are orange(Liar Liar, Pants on Fire), and the rest are green(Talk of the town).]")
+    st.markdown(":blue[The bars are colored based on whether their height is below or above 20% of the mean count of articles. Bars below 80% of the mean are blue(Just a Whiff of Gossip), bars above 120% of the mean are orange(Liar Liar, Pants on Fire), and the rest are green(Talk of the town).]")
 
     st.write(filtered_df.iloc[start_data_idx:end_data_idx, :3])
 
