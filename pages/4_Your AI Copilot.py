@@ -38,13 +38,14 @@ def display_images(filtered_df, offset, length):
 def main():
     # Sub-Title: When
     st.header("Your Misinformation AI Co-pilot")
-    st.write("Facing a challenging piece of misinformation? Our AI co-pilot is here to help! Select the misinformation you're keen on debunking and choose from personas like a Religious Leader, Doctor, or Librarian. Drawing upon their domain wisdom, the co-pilot curates a tailored response to counter the false narrative. It's our way of equipping you with knowledge, perspective, and the confidence to challenge misinformation effectively.")
+    st.write("Facing a challenging piece of misinformation? Our AI co-pilot is here to help! Select the misinformation you're keen on debunking and choose from personas like Religious Leaders, Doctor, Media Literacy Trainer or more. Drawing upon their domain wisdom, the co-pilot curates a tailored response to counter the false narrative. It's our way of equipping you with knowledge, perspective, and the confidence to challenge misinformation effectively.")
     st.markdown(":orange[Caution]")
-    st. write("Our AI co-pilot is an experimental release for understanding the role large language models can play in debunking misinformation. We are using this opportunity to look at safety risks, algorithmic biases, hallucinations, and model performances at this point. If you see a consistent pattern of failure, please send a screenshot to team@dignityindifference.org. The models are rate limited and self hosted. If you experience an error, please try again later.")
+    st. write("Our AI co-pilot is an experimental release for understanding the role Large Language Models(LLMs) can play in debunking misinformation. We are using this opportunity to look at safety risks, algorithmic biases, hallucinations, and model performances at this point. If you see a consistent pattern of failure, please send a screenshot to team@dignityindifference.org. The models are rate limited and self hosted. If you experience an error, please try again later.")
     st.subheader("Choose a misinformation")
 
     # Month and Year Picker
     st.write("Select Date Range")
+     st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
     col1, col2, col3, col4 = st.columns(4)
     month_list = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     with col1:
@@ -82,7 +83,7 @@ def main():
      st.write("", "", "")  # Empty space for alignment
      if st.button("Next", key="next_button"):
         st.session_state['current_image_index'] = min(len(filtered_df) - 1, start_idx + 2)
-    st.write ("Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.")    
+    st.markdown(":orange[Our classifiers are still a work in progress and there might be a few cases of miscategorized factchecks.]")  
     text_to_display = display_images(filtered_df, start_idx, 2)
 
 
@@ -99,7 +100,7 @@ def main():
     
     if 'chatbot' in st.session_state:
         if st.button("Help me with your wisdom"):
-            st.write("This process could take some time. Please wait. The text will appear when the ruuninng animation on the top right stops.")
+            st.write("This process could take up to a minute. Please wait. The text will appear when the running animation on the top right stops.")
             response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
             st.subheader("What they say:")
             st.write(response['text'])
