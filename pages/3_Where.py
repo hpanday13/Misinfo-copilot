@@ -137,7 +137,7 @@ def main():
      st.write("", "", "")  # Empty space for alignment
      if st.button("Next", key="next_button"):
         st.session_state['current_image_index'] = min(len(filtered_df) - 1, start_idx + 6)
-    st.write ("Our classifiers are still a work in progress and there might be a few cases of miscategorised factchecks.")
+    st.markdown(":orange[Our classifiers are still a work in progress and there might be a few cases of miscategorized factchecks.]")
 
 if __name__ == '__main__':
     main()
