@@ -124,7 +124,7 @@ def main():
 
     start_idx = st.session_state['current_image_index']
     end_idx = start_idx + 6
-
+    st.markdown(":orange[We have dropped some locations because of poor classification performance of our models. These locations will be added in the next update.]")
     display_images(filtered_df, start_idx, 6)
 
     prev_button, _, next_button = st.columns([2, 8, 2])
