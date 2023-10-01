@@ -20,7 +20,7 @@ def display_images(filtered_df, offset, length):
 
 def main():
     # Sub-Title: Where
-    st.subheader("What and how")
+    st.subheader("Where")
     st.write("Uncover the geographical hotspots of misinformation with our intuitive map, indicating areas based on the frequency of related fake news. Complement this with a glance at the platforms and their mentions around misinformation. Navigate the charts, choose dates, and use the selection tools to obtain hyperlinked fact-checking articles related to your theme of interest.")
     st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
     # Month and Year Picker
@@ -44,7 +44,7 @@ def main():
     
     filtered_df = df[(df['publication_date'] >= start_date) & (df['publication_date'] <= end_date)]
     st.subheader("Geo-location")
-    st.write("An enhanced location recogniser is being trained and will soon be available for hyperlocal visualisation.")
+    st.write("This feature allows you to locate the hotspots of misinformation on a map. The bubble size is a marker of the number of mentions of the map location for the selected date range. An enhanced granular location recognizer is being trained and will soon be available for hyperlocal visualisation.")
     state_coords = {
     "andhra pradesh": (15.9129, 79.7400),
     "arunachal pradesh": (28.2180, 94.7278),
@@ -98,6 +98,7 @@ def main():
     fig.update_layout(mapbox_style="open-street-map", height=600)
     st.plotly_chart(fig)
     st.subheader("Platfroms")
+    st.write("The bar chart shows the platforms mentioned in the fact-checked misinformation. the length of the bar chart if a sum of mentions for the selected date range.")
     social_media_cols = ['facebook', 'twitter', 'instagram', 'whatsapp', 'linkedin', 'snapchat', 'youtube', 'tiktok', 'pinterest']
     social_media_counts = filtered_df[social_media_cols].sum()
     # Assuming social_media_counts is a pandas Series
