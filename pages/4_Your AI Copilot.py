@@ -38,7 +38,7 @@ def display_images(filtered_df, offset, length):
 def main():
     # Sub-Title: When
     st.header("Your Misinformation AI Co-pilot")
-    st.write("Facing a challenging piece of misinformation? Our AI co-pilot is here to help! Select the misinformation you're keen on debunking and choose from personas like Religious Leaders, Doctor, Media Literacy Trainer or more. Drawing upon their domain wisdom, the co-pilot curates a tailored response to counter the false narrative. It's our way of equipping you with knowledge, perspective, and the confidence to challenge misinformation effectively.")
+    st.write("Facing a challenging piece of misinformation? Our AI co-pilot is here to help! Select the misinformation you're keen on debunking and choose from our 20 personas like Religious Leaders, Doctor, Media Literacy Trainer and more. Drawing upon their domain wisdom, the co-pilot curates a tailored response to counter the false narrative. It's our way of equipping you with knowledge, perspective, and the confidence to challenge misinformation effectively.")
     st.markdown(":orange[Caution]")
     st. write("Our AI co-pilot is an experimental release for understanding the role Large Language Models(LLMs) can play in debunking misinformation. We are using this opportunity to look at safety risks, algorithmic biases, hallucinations, and model performances at this point. If you see a consistent pattern of failure, please send a screenshot to team@dignityindifference.org. The models are rate limited and self hosted. If you experience an error, please try again later.")
     st.subheader("Choose a misinformation")
