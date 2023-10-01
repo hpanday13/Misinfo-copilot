@@ -22,7 +22,7 @@ def main():
     # Sub-Title: What and how
     st.subheader("What and how")
     st.write("Venture into the thematic intricacies of misinformation with our categorized area charts. Trace political, religious, and health-related themes and their nuanced sub-categories like political entities, religious affiliations, and COVID-19 related misinformation. Further delve into specifics with hyperlinked articles, enabling an informed understanding of the underlying facts.")
-    st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the data availability would throw an error.]")
+    st.markdown(":orange[Our current dataset is from July 2017 to August 2023. We are in the process of building a real-time data-stream. Selecting a date range beyond the available data would throw an error.]")
     # Month and Year Picker
     st.write("Select Date Range")
     col1, col2, col3, col4 = st.columns(4)
