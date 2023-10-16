@@ -52,6 +52,3 @@ st.subheader("In near future")
 st.write("1. Expanding the data-lake to multiple IFCN(International Fact-Checking Network) members across South Asia and including 10 most spoken languages in the region.")
 st.write("2. Increase accuracy of our classifiers across languages and build a training dataset for Named Entity Recognition based on the current data-lake.")
 st.write("3. Provide functionality for thick-big data gathering and analysis around misinformation on inputs provided by youth influencers.")
-
-st.subheader("Team")
-st.write("Dridhata, Hameeda, and Himanshu")
