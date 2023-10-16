@@ -10,12 +10,6 @@ email = st.secrets["email"]
 passwd = st.secrets["password"]
 
 
-sign = Login(email, passwd)
-cookies = sign.login()
-chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-st.session_state['chatbot'] = chatbot  # Store chatbot in session state
-# rest of your code
-
 def display_images(filtered_df, offset, length):
     displayed_images = filtered_df['main_image'][offset:offset+length].tolist()
     col1, spacer, col2 = st.columns([1, 0.05, 1])
@@ -152,15 +146,23 @@ def main():
        persona_text = "Adopt the perspective of a creative artist or entertainer. Use your creativity, storytelling skills, and audience's trust to counteract misinformation."
     combined_text = persona_text + " " + text_to_display
     
+    if st.button("Help me with your wisdom"):
+    # Login and create chatbot instance
+    sign = Login(email, passwd)
+    cookies = sign.login()
+    chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
+    st.session_state['chatbot'] = chatbot  # Store chatbot in session state
+
+    # Check if 'chatbot' is in session state and proceed
     if 'chatbot' in st.session_state:
-        if st.button("Help me with your wisdom"):
-            if combined_text.strip():  # Check if 'combined_text' is not empty or just whitespace
-                st.markdown(":orange[This process could take up to a minute. Please wait. The text will appear when the running animation on the top right stops.]")
-                response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
-                st.subheader("What they say:")
-                st.write(response['text'])
-            else:
-                st.warning("The text is empty. Cannot send a blank request.")
+        if combined_text.strip():  # Check if 'combined_text' is not empty or just whitespace
+            st.markdown(":orange[This process could take up to a minute. Please wait. The text will appear when the running animation on the top right stops.]")
+            response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
+            st.subheader("What they say:")
+            st.write(response['text'])
+        else:
+            st.warning("The text is empty. Cannot send a blank request.")
+
 
 
 
