@@ -154,11 +154,13 @@ def main():
     
     if 'chatbot' in st.session_state:
         if st.button("Help me with your wisdom"):
-            st.markdown(":orange[This process could take up to a minute. Please wait. The text will appear when the running animation on the top right stops.]")
-            response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
-            st.subheader("What they say:")
-            st.write(response['text'])
-
+            if combined_text.strip():  # Check if 'combined_text' is not empty or just whitespace
+                st.markdown(":orange[This process could take up to a minute. Please wait. The text will appear when the running animation on the top right stops.]")
+                response = st.session_state['chatbot'].query(text=combined_text, max_new_tokens=1500)
+                st.subheader("What they say:")
+                st.write(response['text'])
+            else:
+                st.warning("The text is empty. Cannot send a blank request.")
 
 
 
